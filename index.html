@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    
+<section class="dataDiv " style="margin-top:200px ;">
+    <div class="container mt-5">
+        <div class="greetingDiv text-center mt-5 p-3 col-10 m-auto ">
+            <h1 class="text-light">مرحبا بكم في اذكار </h1>            
+                <form>
+                    <div class="">
+                                
+                        <div class="form-group col-8 m-auto   ">
+                            <input type="text" class="form-control mt-3 UserName " aria-describedby="emailHelp" placeholder="الاسم ">
+                            <small class="text-danger errText1 "></small>
+                        </div>
+    
+
+                        <div class="form-group col-8 m-auto  ">
+                            <select class="form-control mt-3 selectBox "> </select>
+                            <small class="text-danger errText2 "></small>
+                        </div>
+                        </div>
+                </form>
+                <button  class="btn btn-primary mt-3  butn "> ابداء </button>
+
+
+        </div>
+    </div>
+</section>
+
+
+<section class="countDiv hidden">
+    <div class="container mt-5">
+        <div class="counter text-center col-10 m-auto mt-5 p-5 bg-light rounded rounded-start shadow-lg">
+
+            <h3 class="user">  </h3>
+
+            <h3 class="hadeth mt-3" ></h3>
+            
+            <hr>
+            <h3 class="zekr-container">  </h3>
+            
+            <hr>
+            <h3 class="plus"></h3>
+
+            <p class="count text-center">  </p>
+
+            <button  class="btn btn-primary mt-3  butn2 "> اذكر الله  </button>
+            <button  class="btn btn-primary mt-3  butn3 "> اختر ذكر اخر </button>
+
+        </div>
+    </div>
+</section>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+    <script type="jsonFile" src="jsonFile.json"></script>
+    <!-- <script src="scripts.js"></script> -->
+
+
+
+<script>
+
+
+let data = [
+  {
+    "name": "اختر الذكر",
+  },
+  {
+    "name": "سبحان الله",
+  },
+  {
+    "name": "الحمد الله",
+  },
+  {
+    "name": "الله اكبر ",
+  },
+  {
+    "name": "استغفر الله",
+  },
+  {
+    "name": "ما بعد الصلاه",
+  },
+  {
+    "name": "سيد الاستغفار",
+  },
+  {
+    "name": "سبحان الله وبحمده سبحان الله العظيم",
+  },
+  {
+    "name": "لا حول ولا قوه الا بالله",
+  },
+  {
+    "name": "لا إله إلا الله وحده لا شريك له له الملك وله الحمد وهو على كل شيء قدير",
+  },
+  {
+    "name": "اللهم صلي وسلم وبارك علي سيدنا محمد",
+  },
+  
+]
+
+
+let dataDiv = document.querySelector(".dataDiv");
+let countDiv = document.querySelector(".countDiv");
+let UserName = document.querySelector(".UserName");
+let errText1 = document.querySelector(".errText1");
+let selectBox = document.querySelector(".selectBox");
+let optionaya = document.querySelector(".optionaya");
+let errText2 = document.querySelector(".errText2");
+let butn = document.querySelector(".butn");
+let butn2 = document.querySelector(".butn2");
+let butn3 = document.querySelector(".butn3");
+let hadeth = document.querySelector(".hadeth");
+let zekrContainer = document.querySelector(".zekr-container")
+let plus = document.querySelector(".plus")
+let user = document.querySelector(".user")
+let count = document.querySelector(".count");
+let counter = 0
+
+count.textContent = counter  ;
+
+
+
+
+butn.addEventListener("click" , function () {
+
+    if (selectBox.value !== "اختر الذكر" ) {
+        dataDiv.classList.add("hidden")
+        zekrContainer.textContent = selectBox.value 
+        countDiv.classList.remove("hidden")  
+    }
+
+    else{
+        errText2.textContent =  ` اختر احد الاذكار يا اخي وفقك الله `
+    }
+        
+    
+    user.textContent = ` اهلا ${UserName.value } `;
+   
+    // // let dataHade = optionaya.ID;
+    // // console.log(dataHade);
+    // // hadeth.textContent = 
+
+    // if (selectBox.value) {
+    //     hadeth.textContent = data[optionaya.get("id")]['hadeth']
+    // }
+
+
+        if (selectBox.value == "سبحان الله وبحمده سبحان الله العظيم") {
+            hadeth.textContent = "كلمتان خفيفتان على اللسان ثقيلتان في الميزان حبيبتان إلى الرحمن: سبحان الله وبحمده، سبحان الله العظيم». } " 
+        } 
+
+        if (selectBox.value == "لا حول ولا قوه الا بالله") {
+            hadeth.textContent = "(أَكْثِرُوا مِنْ قَوْلِ لا حَوْلَ وَلا قُوَّةَ إِلاَّ بِاللَّهِ فَإِنَّهَا كَنْزٌ مِنْ كُنُوزِ الْجَنَّةِ)" 
+        }
+        if (selectBox.value == "سيد الاستغفار") {
+            hadeth.textContent = " اللَّهُمَّ أَنْتَ رَبِّي لاَ إِلَهَ إِلَّا أَنْتَ، خَلَقْتَنِي وَأَنَا عَبْدُكَ، وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ، أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ، أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَيَّ، وَأَبُوءُ لَكَ بِذَنْبِي؛ فَاغْفِرْ لِي؛ فَإِنَّهُ لاَ يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ»"
+        }
+        if (selectBox.value == "لا إله إلا الله وحده لا شريك له له الملك وله الحمد وهو على كل شيء قدير" ) {
+            hadeth.textContent = " من قال : لا إلهَ إلَّا اللهُ وحدَه لا شريكَ له ، له المُلْكُ وله الحمْدُ ، وهو على كلِّ شيءٍ قديرٌ . في يومٍ مائةَ مرَّةٍ ، كانت له عِدلُ عشرِ رِقابٍ ، وكُتِبت له مائةُ حسنةٍ ، ومُحِيَتْ عنه مائةُ سيِّئةٍ ، وكانت له حِرزًا من الشَّيطانِ يومَه ذلك حتَّى يُمسيَ ، ولم يأتِ أحدٌ بأفضلَ ممَّا جاء به إلَّا رجلٌ عمِل أكثرَ منه "
+        }      
+     
+
+            
+
+
+
+})
+
+
+
+
+butn2.addEventListener("click" , function () {
+    count.textContent = ++counter; 
+
+
+    if (count.textContent == 100) {
+        plus.textContent = "قال الله سبحانه وتعالى: (وَالذَّاكِرِينَ اللَّهَ كَثِيرًا وَالذَّاكِرَاتِ أَعَدَّ اللَّهُ لَهُم مَّغْفِرَةً وَأَجْرًا عَظِيمًا) [الأحزاب:35]. فاز ذاكرو الله كثيراً بكل خير، فقد هيّأ الله من فضله مغفرة لذنوبهم، وأعد لهم الجنة."
+    }
+
+
+     if (selectBox.value == "ما بعد الصلاه") {
+       
+        console.log("ok");
+      
+        console.log(Number(count.textContent));
+        if (Number(count.textContent) < 33  ) {
+            zekrContainer.textContent = "سبحان الله" 
+            zekrContainer.style.color = 'red'
+        }
+        else if (count.textContent <= 66 ) {
+            zekrContainer.textContent = "الحمد الله" 
+            zekrContainer.style.color = 'blue'
+        }
+        else if (count.textContent >= 66 && count.textContent < 99 ) {
+            zekrContainer.textContent = "الله اكبر" 
+            zekrContainer.style.color = 'green'
+        }
+        else if (count.textContent = 99 ) {
+            zekrContainer.textContent = " اتمم المائه بقولك <<  لا إله إلا الله وحده لا شريك له له الملك وله الحمد وهو على كل شيء قدير.. >>  " 
+            zekrContainer.style.color = 'green'
+        }
+       
+    }
+
+
+});
+
+
+
+
+butn3.addEventListener('click' , function () {
+    UserName.classList.add("hidden");
+    zekrContainer.textContent="";
+    plus.textContent="";
+    hadeth.textContent="";
+    dataDiv.classList.remove("hidden")
+    countDiv.classList.add("hidden") 
+
+}) 
+
+
+
+
+
+
+
+
+for (let i = 0; i <= data.length; i++) {
+     selectBox.innerHTML += `<option  class="optionaya" ID= ${data[i].id} >${data[i]['name']}</option> ` 
+    }
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
