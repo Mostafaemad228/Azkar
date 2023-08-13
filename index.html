@@ -4,110 +4,139 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="../bootstrap/bootstrap.min.css">
+
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
-<body>
+<body> 
     
     
-<section class="dataDiv " style="margin-top:200px ;">
-    <div class="container mt-5">
-        <div class="greetingDiv text-center mt-5 p-3 col-10 m-auto ">
-            <h1 class="text-light">مرحبا بكم في اذكار </h1>            
-                <form>
-                    <div class="">
-                                
-                        <div class="form-group col-8 m-auto   ">
-                            <input type="text" class="form-control mt-3 UserName " aria-describedby="emailHelp" placeholder="الاسم ">
-                            <small class="text-danger errText1 "></small>
+
+    <section class="main" data-vide-bg="videos\1.mp4" >
+
+
+                <section   class="dataDiv pt-5" >
+                    <div class="container ">
+                        <div class="greetingDiv text-center mt-5 p-3 col-10 m-auto ">
+                            <h1 class="text-light">مرحبا بكم في اذكار </h1>            
+                                <form>
+                                    <div class="">
+                                                
+                                        <div class="form-group col-8 m-auto   ">
+                                            <input type="text" class="form-control mt-3 UserName " aria-describedby="emailHelp" placeholder="الاسم ">
+                                            <small class="text-danger errText1 "></small>
+                                        </div>
+                    
+
+                                        <div class="form-group col-8 m-auto  ">
+                                            <select class="form-control mt-3 selectBox "> </select>
+                                            <small class="text-danger errText2 "></small>
+                                        </div>
+                                        </div>
+                                </form>
+                                <button  class="btn btn-primary mt-3  butn "> ابداء </button>
+
+
                         </div>
-    
+                    </div>
+                </section>
 
-                        <div class="form-group col-8 m-auto  ">
-                            <select class="form-control mt-3 selectBox "> </select>
-                            <small class="text-danger errText2 "></small>
+
+                <section class="countDiv hidden pt-5" >
+                    <div class="container ">
+                        <div class="counter text-center col-10 m-auto mt-5 p-5 bg-light rounded rounded-start shadow-lg" >
+
+                            <h3 class="user">  </h3>
+
+                            <h3 class="hadeth mt-3" ></h3>
+                            
+                            <hr>
+                            <h3 class="zekr-container">  </h3>
+                            
+                            <hr>
+                            <h3 class="plus"></h3>
+
+                            <p class="count text-center">  </p>
+
+                            <button  class="btn btn-primary mt-3  butn2 "> اذكر الله  </button>
+                            <button  class="btn btn-primary mt-3  butn3 "> اختر ذكر اخر </button>
+
                         </div>
-                        </div>
-                </form>
-                <button  class="btn btn-primary mt-3  butn "> ابداء </button>
-
-
-        </div>
-    </div>
-</section>
-
-
-<section class="countDiv hidden">
-    <div class="container mt-5">
-        <div class="counter text-center col-10 m-auto mt-5 p-5 bg-light rounded rounded-start shadow-lg">
-
-            <h3 class="user">  </h3>
-
-            <h3 class="hadeth mt-3" ></h3>
-            
-            <hr>
-            <h3 class="zekr-container">  </h3>
-            
-            <hr>
-            <h3 class="plus"></h3>
-
-            <p class="count text-center">  </p>
-
-            <button  class="btn btn-primary mt-3  butn2 "> اذكر الله  </button>
-            <button  class="btn btn-primary mt-3  butn3 "> اختر ذكر اخر </button>
-
-        </div>
-    </div>
-</section>
+                    </div>
+                </section>
 
 
 
 
+    </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+
+
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script> -->
+
+    <script src="../bootstrap/jquery-3.5.1.js"></script>
+    <script src="../bootstrap/popper.min.js"></script>
+    <script src="../bootstrap/bootstrap.min.js"></script>
     <script type="jsonFile" src="jsonFile.json"></script>
     <!-- <script src="scripts.js"></script> -->
 
 
+    <script src="jquery.vide.js"></script>
 
 <script>
 
 
 let data = [
   {
+    "id":"0",
     "name": "اختر الذكر",
+    "hadethe":"MEEEE"
   },
   {
+    "id":"1",
     "name": "سبحان الله",
+    "hadethe":"MEEEE"
   },
   {
+    "id":"2",
     "name": "الحمد الله",
+    "hadethe":"MEEEE"
   },
   {
+    "id":"3",
     "name": "الله اكبر ",
   },
   {
+    "id":"4",
     "name": "استغفر الله",
   },
   {
+    "id":"5",
     "name": "ما بعد الصلاه",
   },
   {
+    "id":"6",
     "name": "سيد الاستغفار",
   },
   {
+    "id":"7",
     "name": "سبحان الله وبحمده سبحان الله العظيم",
   },
   {
+    "id":"8",
     "name": "لا حول ولا قوه الا بالله",
   },
   {
+    "id":"9",
     "name": "لا إله إلا الله وحده لا شريك له له الملك وله الحمد وهو على كل شيء قدير",
   },
   {
+    "id":"10",
     "name": "اللهم صلي وسلم وبارك علي سيدنا محمد",
   },
   
@@ -213,20 +242,14 @@ butn2.addEventListener("click" , function () {
         else if (count.textContent = 99 ) {
             zekrContainer.textContent = " اتمم المائه بقولك <<  لا إله إلا الله وحده لا شريك له له الملك وله الحمد وهو على كل شيء قدير.. >>  " 
             zekrContainer.style.color = 'green'
-        }
-       
+        }  
     }
-
 
 });
 
 
-
-
 butn3.addEventListener('click' , function () {
     UserName.classList.add("hidden");
-    counter=0
-    count.textContent = 0; 
     zekrContainer.textContent="";
     plus.textContent="";
     hadeth.textContent="";
@@ -236,17 +259,9 @@ butn3.addEventListener('click' , function () {
 }) 
 
 
-
-
-
-
-
-
 for (let i = 0; i <= data.length; i++) {
-     selectBox.innerHTML += `<option  class="optionaya" ID= ${data[i].id} >${data[i]['name']}</option> ` 
+     selectBox.innerHTML += `<option  class="optionaya"  id= '${data[i]['id']}' >${data[i]['name']}</option> ` 
     }
-
-
 
 </script>
 
